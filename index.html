@@ -29,11 +29,11 @@
 <nav class="navbar">
   <img src="assets/images/logos/company-logo.svg" alt="Logo" class="logo" />
 
-  <div class="hamburger" onclick="toggleMenu()">
+  <!-- <div class="hamburger" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
-  </div>
+  </div> -->
 
   <ul class="nav-links" id="navLinks">
     <li><a href="#">Home</a></li>
@@ -41,15 +41,21 @@
     <li><a href="#">Services</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
+  <div class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
   
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
     });
   </script>
+  
   
 </nav>
 

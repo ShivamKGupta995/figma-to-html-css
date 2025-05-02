@@ -31,29 +31,24 @@ html {
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
-  z-index: -1;
+  margin: 27px 80px 498px 80px;  
+  display: flex;
+  flex-direction: column;
+  row-gap: 97px;
+  align-content: flex-start;
 }
-
 /* Navbar */
 .navbar {
-  position: absolute;
-  top: 30px;
-  left: 50px;
-  right: 50px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-content: center;
   align-items: center;
 }
 
 .logo {
-  width: 40px;
-  height: auto;
+  width: 72px;
+  height: 72px;
 }
 
 .nav-links {
@@ -63,34 +58,60 @@ html {
 }
 
 .nav-links li a {
+  position: relative;
   text-decoration: none;
   color: white;
-  font-weight: 300;
+  font-weight: 400;
+  font-family: "Sora", sans-serif;
+  line-height: normal;
+  font-style: normal;
   font-size: 16px;
-  transition: color 0.3s;
 }
 
-.nav-links li a:hover {
-  color: #f8485e;
+/* Underline using pseudo-element */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background-color: #CC203B;
+  transition: width 0.5s ease;
 }
+
+/* On hover: show underline and start animation */
+.nav-links li a:hover::after {
+  width: 100%;
+  animation: underlineColor 4s linear forwards;
+}
+
+/* Keyframes for color animation */
+@keyframes underlineColor {
+  0%   { background-color: #CC203B; }
+  25%  { background-color: #ac1129; }
+  50%  { background-color: #6b0615; }
+  100% { background-color: #280309; }
+}
+
 
 /* Hero Text */
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50px;
-  transform: translateY(-50%);
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap:nowrap;
+  color: #FFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "DM Sans";
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 108px; /* 112.5% */
 }
 
 .hero-content p {
   color: #FFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "DM Sans";
-  font-size: 5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 108px;
   /* 112.5% */
 }
 
@@ -99,11 +120,21 @@ html {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "DM Sans";
-  font-size: 5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 108px;
+
+
+}
+.hero-content .t{
+  background: linear-gradient(180deg, #CC203B 49.07%, #FF5D77 61.27%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: "DM Sans";
+font-size: 96px;
+font-style: normal;
+font-weight: 700;
+line-height: 108px;
+letter-spacing: -3.84px;
+
 }
 .hamburger {
   display: none;
@@ -119,20 +150,64 @@ html {
   background: white;
 }
 
+#text-animation {
+  font-style: italic;
+}
+
+.fade-in {
+  animation: opacityUp 1s ease-in-out;
+}
+
+@keyframes opacityUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.cta-button-hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 24px;
+  gap: 10px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #CC203B 0%, #FF5E77 100%);
+  border: none;
+  width: 204px;
+  cursor: pointer;
+}
+.cta-button-hero:hover {
+  background: linear-gradient(90deg, #FF5E77 0%, #CC203B 100%);
+  transition: all 0.3s ease-in-out;
+}
+
 
 @media screen and (max-width: 780px) {
-  .hero-content {
+  /* .hero-content {
     position: absolute;
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
     max-width: 100%;
+  } */
+  .overlay {
+    margin: 27px 22px 498px 22px;  
+    display: flex;
+    flex-direction: column;
+    row-gap: 97px;
+    align-content: flex-start;
   }
 
   .hero-content p,
   .hero-content .red {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 60px;
+    line-height: 70px;
   }
 
   .navbar {

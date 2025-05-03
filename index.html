@@ -1,186 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Supershyft</title>
-    <link rel="stylesheet" href="assets/css/index.css" />
-  </head>
-  <body>
-    <div
-      class="hero"
-    >
-      <video autoplay muted loop id="bg-video">
-        <source src="assets/videos/home/hero.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
 
-      <div class="overlay">
-     <!-- Navbar -->
-     <nav class="navbar">
-      <img src="assets/images/logos/company-logo.svg" alt="Logo" class="logo"  onclick=toggleMenu()/>
-    
-      <!-- <div class="hamburger" onclick="toggleMenu()">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supershyft</title>
+  <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="assets/videos/home/hero.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <img src="assets/images/logos/company-logo.svg" alt="Logo" class="logo" onclick=toggleMenu() />
+
+        <!-- <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
       </div> -->
-    
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link">About</a></li>
-        <li><a href="#" class="nav-link">Services</a></li>
-        <li><a href="#" class="nav-link">Contact</a></li>
-      </ul>
-     
-      <div class="hamburger">
-        <img src="./assets/images/home/quill-hamburger.svg" alt="">
-      </div>
-    
-      <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-      
-        hamburger.addEventListener("click", () => {
-          navLinks.classList.toggle("show");
-          hamburger.classList.toggle("centered");
-        });
-      </script>
-      
-      
-    </nav>
-    
-    
-    <div class="hero-content">
-            <p>
-              Introducing 
-            </p>
-            <span class="red">Supershyf<span class="t">t</span></span>
-           <p>For <span id="text-animation">Prevention</span></p>
-      </div>
-    <div>
-      <button class="cta-button-hero">
-        <span>Get Supershyft Today</span>
-      </button>
-    </div>
-  </div>
 
-     <script>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Services</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="hamburger">
+          <img src="./assets/images/home/quill-hamburger.svg" alt="">
+        </div>
+
+        <script>
+          const hamburger = document.querySelector(".hamburger");
+          const navLinks = document.querySelector(".nav-links");
+
+          hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+            hamburger.classList.toggle("centered");
+          });
+        </script>
+
+
+      </nav>
+
+
+      <div class="hero-content">
+        <p>
+          Introducing
+        </p>
+        <span class="red">Supershyf<span class="t">t</span></span>
+        <p>For <span id="text-animation">Prevention</span></p>
+      </div>
+      <div>
+        <button class="cta-button-hero">
+          <span>Get Supershyft Today</span>
+        </button>
+      </div>
+    </div>
+
+    <script>
       const textAnimation = document.getElementById("text-animation");
-const words = ["Prevention", "Precision Nutrition", "Longevity", "Age Reversal"];
-let index = 1;
+      const words = ["Prevention", "Precision Nutrition", "Longevity", "Age Reversal"];
+      let index = 1;
 
-function animateText() {
-  // Remove animation class
-  textAnimation.classList.remove("fade-in");
+      function animateText() {
+        // Remove animation class
+        textAnimation.classList.remove("fade-in");
 
-  // Trigger reflow to restart animation
-  void textAnimation.offsetWidth;
+        // Trigger reflow to restart animation
+        void textAnimation.offsetWidth;
 
-  // Set new text
-  textAnimation.innerHTML = words[index];
+        // Set new text
+        textAnimation.innerHTML = words[index];
 
-  // Re-add animation class
-  textAnimation.classList.add("fade-in");
+        // Re-add animation class
+        textAnimation.classList.add("fade-in");
 
-  index = (index + 1) % words.length;
-}
+        index = (index + 1) % words.length;
+      }
 
-setInterval(animateText, 3000);
+      setInterval(animateText, 3000);
 
-     </script>
-    </div>
-    <section class="diagnosis-section">
-      <div class="diagnosis-text">
-        <p class="section-tag">INTRODUCING</p>
-        <h2 class="section-title">Supershyft</h2>
+    </script>
+  </header>
+  <section class="diagnosis-section">
+    <div class="diagnosis-text">
+      <div class="diagnosis-text-header">
+        <div class="section-tag-container">
+          <p class="section-tag">INTRODUCING</p>
+
+        </div>
+          <p class="section-title">Supershyft</p>
+
+      </div>
+      <div>
         <p class="section-subtitle">
           A Bio AI-powered solution that predicts health risks early and
           helps<br />
           you achieve better health with simple, science-backed changes.
         </p>
-        <p class="section-note">Drag to see the difference</p>
       </div>
 
-      <div class="diagnosis-image">
-        <img
-          src="assets/images/home/general/diagnosis-dashboard.jpg"
-          alt="Health Dashboard"
-        />
-      </div>
-      </section>
-    </section>
+    </div>
+    <div>
+      <p class="section-note">Drag to see the difference</p>
 
-    <section class="core-section">
-      <h2 class="core-title">Science at it’s <span>core</span></h2>
-      <br /><br />
-      <div class="core-block">
-        <div class="core-text">
-          <h3>Trusted By <span>Healthleaders</span></h3>
-          <p>
-            Our advanced systems work with leading tech firms and doctors to
-            deliver precision health solutions.
-            <br /><br />
-            <span>
-              With 20+ corporate partnerships and 10,000+ lives transformed,
-              Supershyft helps you take control of your health with data driven
-              insights and proven results.
-            </span>
-          </p>
-        </div>
-        <div class="core-media">
-          <video autoplay muted loop playsinline>
-            <source src="assets/videos/home/doctor.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+    </div>
+    <div class="diagnosis-image">
+      <img src="assets/images/home/general/diagnosis-dashboard.jpg" alt="Health Dashboard"  id="diagnosis-image-before"/>
+      <div id="slider">
+        <img src="assets/images/home/icons/super-shift-icon.svg" alt="Health Dashboard" id="diagnosis-superceft-logo" onclick="toggleSlider()"/>
       </div>
-       <hr>
 
-      <div class="core-block">
-        <div class="core-media">
-          <img src="assets/images/home/general/metabolism.svg" alt="Metabolic Assessment" />
-        </div>
-        <div class="core-text">
-          <h3>Precision <span>Beyond</span> Numbers</h3>
-          <p>
-            Supershyft uses <span>Bio AI to deliver over 92%</span> accurate
-            metabolic assessments,<span
-              >analyzing 88+ biomarkers to predict risks for 12+
-              conditions,</span
-            >including PCOS/PCOD, Oxidative Stress, Cardiac Risk, Dyslipidemia
-            etc.
-          </p>
-        </div>
+      <script>
+        let isMovedRight = false;
+
+function toggleSlider() {
+  const slider = document.getElementById("slider");
+  const diagnosisImage = document.getElementById("diagnosis-image-before");
+  const logo = document.getElementById("diagnosis-superceft-logo");
+  const image_width = document.getElementsByClassName("diagnosis-image");
+  const properyImageWidth = image_width[0].offsetWidth * 0.90;
+  console.log(properyImageWidth);
+
+  if (!isMovedRight) {
+    slider.style.transform = `translateX(-${properyImageWidth}px)`;
+    diagnosisImage.src = "assets/images/home/general/diagnosis-dashboard-after.jpg";
+    slider.style.background = "linear-gradient(90deg, #18856a 0%, #24c2b5 100%)";
+    logo.style.background = "linear-gradient(90deg, #18856a 0%, #24c2b5 100%)";
+  } else {
+    slider.style.transform = "translateX(0px)";
+    diagnosisImage.src = "assets/images/home/general/diagnosis-dashboard.jpg";
+    slider.style.background = "linear-gradient(90deg, #FF4562 0%, #B53A4D 100%)";
+    logo.style.background = "linear-gradient(90deg, #FF4562 0%, #B53A4D 100%)";
+  }
+
+  isMovedRight = !isMovedRight;
+}
+
+        
+      </script>
+      
+    </div>
+  </section>
+
+  <section class="core-section">
+    <h2 class="core-title">Science at it’s <span>core</span></h2>
+    <br /><br />
+    <div class="core-block">
+      <div class="core-text">
+        <h3>Trusted By <span>Healthleaders</span></h3>
+        <p>
+          Our advanced systems work with leading tech firms and doctors to
+          deliver precision health solutions.
+          <br /><br />
+          <span>
+            With 20+ corporate partnerships and 10,000+ lives transformed,
+            Supershyft helps you take control of your health with data driven
+            insights and proven results.
+          </span>
+        </p>
       </div>
-<hr>
-      <div class="core-block">
-        <div class="core-text">
-          <h3>Fixing What the <span>Mirror Can’t Show</span></h3>
-          <p>
-            Your metabolism impacts 98% of all lifestyle diseases, your overall
-            health and longevity.<br /><span
-              >Supershyft uses advanced Bio AI technology to analyze blood
-              health and metabolic markers, delivering expert-driven lifestyle
-              plans.</span
-            ><br />
-            A science-backed approach to lasting well-being, beyond what the
-            mirror reflects.
-          </p>
-        </div>
-        <div class="core-media">
-          <video autoplay muted loop playsinline>
-            <source src="assets/videos/home/mirror.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+      <div class="core-media">
+        <video autoplay muted loop playsinline>
+          <source src="assets/videos/home/doctor.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
-    </section>
+    </div>
+    <hr>
+
+    <div class="core-block">
+      <div class="core-media">
+        <img src="assets/images/home/general/metabolism.svg" alt="Metabolic Assessment" />
+      </div>
+      <div class="core-text">
+        <h3>Precision <span>Beyond</span> Numbers</h3>
+        <p>
+          Supershyft uses <span>Bio AI to deliver over 92%</span> accurate
+          metabolic assessments,<span>analyzing 88+ biomarkers to predict risks for 12+
+            conditions,</span>including PCOS/PCOD, Oxidative Stress, Cardiac Risk, Dyslipidemia
+          etc.
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="core-block">
+      <div class="core-text">
+        <h3>Fixing What the <span>Mirror Can’t Show</span></h3>
+        <p>
+          Your metabolism impacts 98% of all lifestyle diseases, your overall
+          health and longevity.<br /><span>Supershyft uses advanced Bio AI technology to analyze blood
+            health and metabolic markers, delivering expert-driven lifestyle
+            plans.</span><br />
+          A science-backed approach to lasting well-being, beyond what the
+          mirror reflects.
+        </p>
+      </div>
+      <div class="core-media">
+        <video autoplay muted loop playsinline>
+          <source src="assets/videos/home/mirror.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
 
   </section>
   <section class="health-risk-section">
     <h2>Track vital signs for health risks</h2>
-  
+
     <div class="scroll-row left">
       <div class="scroll-content">
         <div class="pill"><span>Diabetes</span></div>
@@ -198,7 +234,7 @@ setInterval(animateText, 3000);
 
       </div>
     </div>
-  
+
     <div class="scroll-row right">
       <div class="scroll-content">
         <div class="pill"><span>Cardiac Health</span></div>
@@ -220,7 +256,7 @@ setInterval(animateText, 3000);
 
       </div>
     </div>
-  
+
     <div class="scroll-row left">
       <div class="scroll-content">
         <div class="pill"><span>Diabetes</span></div>
@@ -238,318 +274,341 @@ setInterval(animateText, 3000);
       </div>
     </div>
   </section>
-    <section class="how-it-works">
-      <div class="how-title">
-        <h2>How Supershyft works ?</h2>
-      </div>
-      <div
-        class="how-step"
-        style="background: var(--Light-green, rgba(6, 53, 51, 0.1))"
-      >
-        <div class="how-step-number">1.</div>
-        <div>
-          <div class="how-step-title">Schedule Your Bio AI Test</div>
-          <div class="how-step-description">
-            Instantly schedule blood tests on our platform and answer your
-            lifestyle questions.
-          </div>
+  <section class="how-it-works">
+    <div class="how-title">
+      <h2>How Supershyft works ?</h2>
+    </div>
+    <div class="how-step" style="background: var(--Light-green, rgba(6, 53, 51, 0.1))">
+      <div class="how-step-number">1.</div>
+      <div>
+        <div class="how-step-title">Schedule Your Bio AI Test</div>
+        <div class="how-step-description">
+          Instantly schedule blood tests on our platform and answer your
+          lifestyle questions.
         </div>
       </div>
+    </div>
 
-      <div
-        class="how-step">
-        <div class="how-step-number">2.</div>
-        <div>
-          <div class="how-step-title">Get Your Supershyft Report</div>
-          <div class="how-step-description">
-            Our advanced algorithms predict risks for 12+ metabolic diseases.
+    <div class="how-step">
+      <div class="how-step-number">2.</div>
+      <div>
+        <div class="how-step-title">Get Your Supershyft Report</div>
+        <div class="how-step-description">
+          Our advanced algorithms predict risks for 12+ metabolic diseases.
 
-          </div>
         </div>
       </div>
+    </div>
 
-    
 
-      <div class="how-step">
-        <div class="how-step-number">3.</div>
-        <div>
-          <div class="how-step-title">Lifestyle Assessment</div>
-          <div class="how-step-description">
-            Get a completely personalized lifestyle plan including your
-            nutrition plan and workouts based on your Supershft report.
-          </div>
+
+    <div class="how-step">
+      <div class="how-step-number">3.</div>
+      <div>
+        <div class="how-step-title">Lifestyle Assessment</div>
+        <div class="how-step-description">
+          Get a completely personalized lifestyle plan including your
+          nutrition plan and workouts based on your Supershft report.
         </div>
       </div>
-      <div class="how-step">
-        <div class="how-step-number">4.</div>
-        <div>
-          <div class="how-step-title">Take Action. Test Again.</div>
-          <div class="how-step-description">
-            Test every few months to watch your health progress over time
-          </div>
+    </div>
+    <div class="how-step">
+      <div class="how-step-number">4.</div>
+      <div>
+        <div class="how-step-title">Take Action. Test Again.</div>
+        <div class="how-step-description">
+          Test every few months to watch your health progress over time
         </div>
       </div>
-      <!-- Repeat for steps 2, 3, 4 -->
-      <button class="cta-button"><span>Get Supershyft Today</span></button>
-    </section>
-    
-    <section class="why-supershyft" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">
-      <div class="why-supershyft-container">
-    
-        <h2>Why Supershyft?</h2>
-    
-        <div class="why-supershyft-detail">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Brand</th>
-                <th>Affordability</th>
-                <th>Compliance</th>
-                <th>Disease Risk Predictions</th>
-                <th>Metabolic Insights</th>
-                <th>Physiological Blood Marker Analysis</th>
-                <th>Doctor Recommended</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Brand"><img src="assets/images/superSyft.png" alt="SuperShyft Logo" /></td>
-                <td data-label="Affordability"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Compliance"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Disease Risk Predictions"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Metabolic Insights"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Physiological Blood Marker Analysis"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Doctor Recommended"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-              </tr>
-              <tr>
-                <td data-label="Brand">Other Brands</td>
-                <td data-label="Affordability"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-                <td data-label="Compliance"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Disease Risk Predictions"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-                <td data-label="Metabolic Insights"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-                <td data-label="Physiological Blood Marker Analysis"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-                <td data-label="Doctor Recommended"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    </div>
+    <!-- Repeat for steps 2, 3, 4 -->
+    <button class="cta-button"><span>Get Supershyft Today</span></button>
+  </section>
+
+  <section class="why-supershyft"
+    style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">
+    <div class="why-supershyft-container">
+
+      <h2>Why Supershyft?</h2>
+
+      <div class="why-supershyft-detail">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Brand</th>
+              <th>Affordability</th>
+              <th>Compliance</th>
+              <th>Disease Risk Predictions</th>
+              <th>Metabolic Insights</th>
+              <th>Physiological Blood Marker Analysis</th>
+              <th>Doctor Recommended</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Brand"><img src="assets/images/superSyft.png" alt="SuperShyft Logo" /></td>
+              <td data-label="Affordability"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
+              <td data-label="Compliance"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
+              <td data-label="Disease Risk Predictions"><img src="assets/images/home/icons/tick-circle.svg"
+                  alt="Tick" /></td>
+              <td data-label="Metabolic Insights"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
+              <td data-label="Physiological Blood Marker Analysis"><img src="assets/images/home/icons/tick-circle.svg"
+                  alt="Tick" /></td>
+              <td data-label="Doctor Recommended"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
+            </tr>
+            <tr>
+              <td data-label="Brand">Other Brands</td>
+              <td data-label="Affordability"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
+              <td data-label="Compliance"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
+              <td data-label="Disease Risk Predictions"><img src="assets/images/home/icons/close-circle.svg"
+                  alt="Cross" /></td>
+              <td data-label="Metabolic Insights"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" />
+              </td>
+              <td data-label="Physiological Blood Marker Analysis"><img src="assets/images/home/icons/close-circle.svg"
+                  alt="Cross" /></td>
+              <td data-label="Doctor Recommended"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </section>
-    
-    <section class="why-supershyft" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">
+    </div>
+  </section>
+
+  <section class="why-supershyft"
+    style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">
     <div class="pricing-container">
       <div class="pricing-container-title">
         <h2>What Costs You <del>₹9,999</del> is ₹1,999/</h2>
         <p>Start tracking and improve your health</p>
+      </div>
+
+      <div class="pricing-container-details">
+        <div> <img src="assets/images/home/icons/heart-beat-icon.svg" alt="Health Dashboard" class="pricing-image" />
+          <h2>Full Body Blood Test</h2>
+          <p>Covers 88+ blood markers including Vitals, Lipid Profile, Liver Profile, Kidney, Thyroid and a lot more.
+          </p>
+          <h3>Market Price: ₹4,499/-</h3>
+        </div>
+
+        <div> <img src="assets/images/home/icons/tick-icon.svg" alt="Health Dashboard" class="pricing-image" />
+          <h2>SuperShyft Report</h2>
+          <p>Analyzing and tracking results for 12+ metabolic diseases. This is a proprietary technology with over 90%
+            accuracy recommended by doctors</p>
+          <h3>Value: 2,499/-</h3>
+        </div>
+
+        <div> <img src="assets/images/home/icons/heart-icon.svg" alt="Health Dashboard" class="pricing-image" />
+          <h2>Lifestyle Recommendations</h2>
+          <p>Personalized nutrition & workout plan.</p>
+          <h3>Value: 1,999/-</h3>
+        </div>
+
+
+
+
+
+      </div>
+      <h2 class="pricing-container-cta">Yours Today For Only <span>₹1,999/-</span></h2>
+
+
+      <button class="cta-button"><span>Get Supershyft Today</span></button>
+
+
+  </section>
+
+  <section class="client-logo-header"
+    style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">
+    <div class="client-logo-container-head">
+      <h2>Our Client</h2>
+
+      <div class="client-logo-grid">
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/nvidea.svg"
+            alt="Client Logo 1" /></div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/yash-raj-film.svg"
+            alt="Client Logo 2" /></div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/monk-e.svg"
+            alt="Client Logo 3" /></div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/lg.svg" alt="Client Logo 4" />
+        </div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/grayopus_logo.png.svg"
+            alt="Client Logo 5" /></div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/shipyaari_logo.png.svg"
+            alt="Client Logo 6" /></div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/basic.svg"
+            alt="Client Logo 7" /></div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/ingradiant.svg"
+            alt="Client Logo 8" /></div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/nitin-shety-co.svg"
+            alt="Client Logo 9" /></div>
+        <div class="client-logo-container"><img
+            src="assets/images/home/logos-our-clients/earlyseed_ventures_icon.jpeg.svg" alt="Client Logo 10" /></div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/Group 41653.svg"
+            alt="Client Logo 11" /></div>
+        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/snitch.svg"
+            alt="Client Logo 12" /></div>
+      </div>
+
+
+
+
+
     </div>
 
-    <div class="pricing-container-details">
-      <div> <img src = "assets/images/home/icons/heart-beat-icon.svg" alt="Health Dashboard" class="pricing-image" />
-        <h2>Full Body Blood Test</h2>
-        <p>Covers 88+ blood markers including Vitals, Lipid Profile, Liver Profile, Kidney, Thyroid and a lot more.</p>
-        <h3>Market Price: ₹4,499/-</h3>
-      </div>
-
-      <div> <img src = "assets/images/home/icons/tick-icon.svg" alt="Health Dashboard" class="pricing-image" />
-        <h2>SuperShyft Report</h2>
-        <p>Analyzing and tracking results for 12+ metabolic diseases. This is a proprietary technology with over 90% accuracy recommended by doctors</p>
-        <h3>Value: 2,499/-</h3>
-      </div>
-
-      <div> <img src = "assets/images/home/icons/heart-icon.svg" alt="Health Dashboard" class="pricing-image" />
-        <h2>Lifestyle Recommendations</h2>
-        <p>Personalized nutrition & workout plan.</p>
-        <h3>Value: 1,999/-</h3>
-      </div>
+  </section>
 
 
-     
+  <section class="testimoney-section">
+    <h1>What Our Clients Say About Us</h1>
 
-
-  </div>
-    <h2 class="pricing-container-cta">Yours Today For Only <span>₹1,999/-</span></h2>
-
-
-    <button class="cta-button"><span>Get Supershyft Today</span></button>
-
-
-    </section>
-    
-    <section class="client-logo-header" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">
-      <div class="client-logo-container-head">
-          <h2>Our Client</h2>
-       
-       <div class="client-logo-grid">
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/nvidea.svg" alt="Client Logo 1" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/yash-raj-film.svg" alt="Client Logo 2" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/monk-e.svg" alt="Client Logo 3" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/lg.svg" alt="Client Logo 4" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/grayopus_logo.png.svg" alt="Client Logo 5" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/shipyaari_logo.png.svg" alt="Client Logo 6" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/basic.svg" alt="Client Logo 7" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/ingradiant.svg" alt="Client Logo 8" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/nitin-shety-co.svg" alt="Client Logo 9" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/earlyseed_ventures_icon.jpeg.svg" alt="Client Logo 10" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/Group 41653.svg" alt="Client Logo 11" /></div>
-        <div class="client-logo-container"><img src="assets/images/home/logos-our-clients/snitch.svg" alt="Client Logo 12" /></div>
-      </div>
-
-          
-
-           
-
-       </div>
-      
-    </section>
-
-
-    <section class="testimoney-section">
-        <h1>What Our Clients Say About Us</h1>
-
-        <div class="carousel" id="carousel">
-          <div class="testimonial">
-            <div class="testimonial-image">
-              <img src="assets/images/testimoney1.png" alt="Viraj Sheth">
-              <div class="testimonial-image-detail">
-                <div class="author">Viraj Sheth 01</div>
-                <div class="author-role">CEO - Monk Entertainment</div>
-              </div>
-             
-
-            </div>
-            <div class="testimonial-text">
-              <div class="quote">“</div>
-              <h2>Personalized recommendations have helped me make informed lifestyle choices.</h2>
-              <p>I recently got my BioAI health analysis done, and I’m impressed with the depth of insights it provides. 
-              The report is detailed yet easy to understand, giving me a clear picture of my health status. Highly recommended for anyone looking to take a proactive approach to their well-being.</p>
-              
-            </div>
-          </div>
-
-          <div class="testimonial">
-            <div class="testimonial-image">
-              <img src="assets/images/testimoney1.png" alt="Viraj Sheth">
-              <div class="testimonial-image-detail">
-                <div class="author">Viraj Sheth 02</div>
-                <div class="author-role">CEO - Monk Entertainment</div>
-              </div>
-             
-
-            </div>
-            <div class="testimonial-text">
-              <div class="quote">“</div>
-              <h2>Personalized recommendations have helped me make informed lifestyle choices.</h2>
-              <p>I recently got my BioAI health analysis done, and I’m impressed with the depth of insights it provides. 
-              The report is detailed yet easy to understand, giving me a clear picture of my health status. Highly recommended for anyone looking to take a proactive approach to their well-being.</p>
-              
-            </div>
+    <div class="carousel" id="carousel">
+      <div class="testimonial">
+        <div class="testimonial-image">
+          <img src="assets/images/testimoney1.png" alt="Viraj Sheth">
+          <div class="testimonial-image-detail">
+            <div class="author">Viraj Sheth 01</div>
+            <div class="author-role">CEO - Monk Entertainment</div>
           </div>
 
 
-          <div class="testimonial">
-            <div class="testimonial-image">
-              <img src="assets/images/testimoney1.png" alt="Viraj Sheth">
-              <div class="testimonial-image-detail">
-                <div class="author">Viraj Sheth</div>
-                <div class="author-role">CEO - Monk Entertainment</div>
-              </div>
-             
-
-            </div>
-            <div class="testimonial-text">
-              <div class="quote">“</div>
-              <h2>Personalized recommendations have helped me make informed lifestyle choices.</h2>
-              <p>I recently got my BioAI health analysis done, and I’m impressed with the depth of insights it provides. 
-              The report is detailed yet easy to understand, giving me a clear picture of my health status. Highly recommended for anyone looking to take a proactive approach to their well-being.</p>
-              
-            </div>
-          </div>
         </div>
-      
-        <div class="dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+        <div class="testimonial-text">
+          <div class="quote">“</div>
+          <h2>Personalized recommendations have helped me make informed lifestyle choices.</h2>
+          <p>I recently got my BioAI health analysis done, and I’m impressed with the depth of insights it provides.
+            The report is detailed yet easy to understand, giving me a clear picture of my health status. Highly
+            recommended for anyone looking to take a proactive approach to their well-being.</p>
+
         </div>
-       <script>
-        const carousel = document.getElementById("carousel");
-        const dots = document.querySelectorAll(".dot");
-      
-        function updateCarousel(index) {
-          const slide = carousel.children[0]; // one .testimonial
-          const slideWidth = slide.offsetWidth;
-          const gap = parseInt(getComputedStyle(carousel).gap || "0");
-          const offset = index * -(slideWidth + gap);
-        
-          carousel.style.transform = `translateX(${offset}px)`;
-        
-          dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === index);
-          });
-        
-          activeIndex = index;
-        }
-        
-      
-        // Attach click event to dots
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-image">
+          <img src="assets/images/testimoney1.png" alt="Viraj Sheth">
+          <div class="testimonial-image-detail">
+            <div class="author">Viraj Sheth 02</div>
+            <div class="author-role">CEO - Monk Entertainment</div>
+          </div>
+
+
+        </div>
+        <div class="testimonial-text">
+          <div class="quote">“</div>
+          <h2>Personalized recommendations have helped me make informed lifestyle choices.</h2>
+          <p>I recently got my BioAI health analysis done, and I’m impressed with the depth of insights it provides.
+            The report is detailed yet easy to understand, giving me a clear picture of my health status. Highly
+            recommended for anyone looking to take a proactive approach to their well-being.</p>
+
+        </div>
+      </div>
+
+
+      <div class="testimonial">
+        <div class="testimonial-image">
+          <img src="assets/images/testimoney1.png" alt="Viraj Sheth">
+          <div class="testimonial-image-detail">
+            <div class="author">Viraj Sheth</div>
+            <div class="author-role">CEO - Monk Entertainment</div>
+          </div>
+
+
+        </div>
+        <div class="testimonial-text">
+          <div class="quote">“</div>
+          <h2>Personalized recommendations have helped me make informed lifestyle choices.</h2>
+          <p>I recently got my BioAI health analysis done, and I’m impressed with the depth of insights it provides.
+            The report is detailed yet easy to understand, giving me a clear picture of my health status. Highly
+            recommended for anyone looking to take a proactive approach to their well-being.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <script>
+      const carousel = document.getElementById("carousel");
+      const dots = document.querySelectorAll(".dot");
+
+      function updateCarousel(index) {
+        const slide = carousel.children[0]; // one .testimonial
+        const slideWidth = slide.offsetWidth;
+        const gap = parseInt(getComputedStyle(carousel).gap || "0");
+        const offset = index * -(slideWidth + gap);
+
+        carousel.style.transform = `translateX(${offset}px)`;
+
         dots.forEach((dot, i) => {
-          dot.addEventListener("click", () => {
-            updateCarousel(i);
-          });
+          dot.classList.toggle("active", i === index);
         });
-      
-        // Default to the middle card (index 1)
-        window.addEventListener("DOMContentLoaded", () => {
-          updateCarousel(1);
+
+        activeIndex = index;
+      }
+
+
+      // Attach click event to dots
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          updateCarousel(i);
         });
-      </script>
-      
-    </section>
+      });
 
-    
+      // Default to the middle card (index 1)
+      window.addEventListener("DOMContentLoaded", () => {
+        updateCarousel(1);
+      });
+    </script>
 
-    <footer class="site-footer">
-      <div class="footer-content">
-        <!-- Left Section -->
-        <div class="footer-left">
-          <img src="assets/images/logos/company-name-logo.svg" alt="Supershyft Logo" class="footer-logo" />
-          <!-- <p class="footer-tagline">Empowering brands with smart tech.</p> -->
-        </div>
-    
-        <!-- Navigation Section -->
-        <div class="footer-nav">
-          <div class="footer-link-group">
-            <a href="#">Home</a>
-            <a href="#">Our Tech</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
-          </div>
-        </div>
-    
-        <!-- Social Section -->
-        <div class="footer-social">
-          <p>Follow us</p>
-          <a href="#"><img src="assets/images/icons/mingcute_instagram-fill.svg" alt="Instagram" /></a>
-          <a href="#"><img src="assets/images/icons/mingcute_linkedin-fill.svg" alt="LinkedIn" /></a>
+  </section>
+
+
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <!-- Left Section -->
+      <div class="footer-left">
+        <img src="assets/images/logos/company-name-logo.svg" alt="Supershyft Logo" class="footer-logo" />
+        <!-- <p class="footer-tagline">Empowering brands with smart tech.</p> -->
+      </div>
+
+      <!-- Navigation Section -->
+      <div class="footer-nav">
+        <div class="footer-link-group">
+          <a href="#">Home</a>
+          <a href="#">Our Tech</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
         </div>
       </div>
-    
-      <!-- Bottom Line -->
-      <div class="footer-bottom">
-        <div class="footer-social-mob">
-          <p>Follow us</p>
-          <a href="#"><img src="assets/images/icons/mingcute_instagram-fill.svg" alt="Instagram" /></a>
-          <a href="#"><img src="assets/images/icons/mingcute_linkedin-fill.svg" alt="LinkedIn" /></a>
-        </div>
+
+      <!-- Social Section -->
+      <div class="footer-social">
+        <p>Follow us</p>
+        <a href="#"><img src="assets/images/icons/mingcute_instagram-fill.svg" alt="Instagram" /></a>
+        <a href="#"><img src="assets/images/icons/mingcute_linkedin-fill.svg" alt="LinkedIn" /></a>
+      </div>
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="footer-bottom">
+      <div class="footer-social-mob">
+        <p>Follow us</p>
+        <a href="#"><img src="assets/images/icons/mingcute_instagram-fill.svg" alt="Instagram" /></a>
+        <a href="#"><img src="assets/images/icons/mingcute_linkedin-fill.svg" alt="LinkedIn" /></a>
+      </div>
+      <hr />
+      <p>© 2025 Supershyft. All rights reserved.</p>
+      <div class="footer-bottom-mob">
         <hr />
-        <p>© 2025 Supershyft. All rights reserved.</p>
-        <div class="footer-bottom-mob">
-          <hr/>
-        </div>
       </div>
-     
-    </footer>
-    
-    
-  </body>
+    </div>
+
+  </footer>
+
+
+</body>
+
 </html>

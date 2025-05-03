@@ -9,14 +9,6 @@
   <body>
     <div
       class="hero"
-      style="
-        background: linear-gradient(
-          90deg,
-          rgba(30, 65, 58, 0.75) 0%,
-          rgba(0, 0, 0, 0.5) 25.69%,
-          rgba(0, 0, 0, 0) 53.44%
-        );
-      "
     >
       <video autoplay muted loop id="bg-video">
         <source src="assets/videos/home/hero.mp4" type="video/mp4" />
@@ -26,7 +18,7 @@
       <div class="overlay">
      <!-- Navbar -->
      <nav class="navbar">
-      <img src="assets/images/logos/company-logo.svg" alt="Logo" class="logo" />
+      <img src="assets/images/logos/company-logo.svg" alt="Logo" class="logo"  onclick=toggleMenu()/>
     
       <!-- <div class="hamburger" onclick="toggleMenu()">
         <span></span>
@@ -42,9 +34,7 @@
       </ul>
      
       <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
+        <img src="./assets/images/home/quill-hamburger.svg" alt="">
       </div>
     
       <script>
@@ -53,6 +43,7 @@
       
         hamburger.addEventListener("click", () => {
           navLinks.classList.toggle("show");
+          hamburger.classList.toggle("centered");
         });
       </script>
       
@@ -72,6 +63,8 @@
         <span>Get Supershyft Today</span>
       </button>
     </div>
+  </div>
+
      <script>
       const textAnimation = document.getElementById("text-animation");
 const words = ["Prevention", "Precision Nutrition", "Longevity", "Age Reversal"];
@@ -115,12 +108,12 @@ setInterval(animateText, 3000);
           alt="Health Dashboard"
         />
       </div>
+      </section>
     </section>
 
     <section class="core-section">
       <h2 class="core-title">Science at it’s <span>core</span></h2>
       <br /><br />
-
       <div class="core-block">
         <div class="core-text">
           <h3>Trusted By <span>Healthleaders</span></h3>
@@ -520,7 +513,7 @@ setInterval(animateText, 3000);
         <!-- Left Section -->
         <div class="footer-left">
           <img src="assets/images/logos/company-name-logo.svg" alt="Supershyft Logo" class="footer-logo" />
-          <p class="footer-tagline">Empowering brands with smart tech.</p>
+          <!-- <p class="footer-tagline">Empowering brands with smart tech.</p> -->
         </div>
     
         <!-- Navigation Section -->
@@ -543,9 +536,18 @@ setInterval(animateText, 3000);
     
       <!-- Bottom Line -->
       <div class="footer-bottom">
+        <div class="footer-social-mob">
+          <p>Follow us</p>
+          <a href="#"><img src="assets/images/icons/mingcute_instagram-fill.svg" alt="Instagram" /></a>
+          <a href="#"><img src="assets/images/icons/mingcute_linkedin-fill.svg" alt="LinkedIn" /></a>
+        </div>
         <hr />
-        <p>© 2025 Supershyft. All rights reserved.</p>
+        <p>© 2025 Supershyft. All rights reserved.</p>
+        <div class="footer-bottom-mob">
+          <hr/>
+        </div>
       </div>
+     
     </footer>
     
     

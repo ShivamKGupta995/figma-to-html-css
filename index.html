@@ -127,19 +127,24 @@ function toggleSlider() {
   const diagnosisImage = document.getElementById("diagnosis-image-before");
   const logo = document.getElementById("diagnosis-superceft-logo");
   const image_width = document.getElementsByClassName("diagnosis-image");
-  const properyImageWidth = image_width[0].offsetWidth * 0.90;
+  const properyImageWidth = image_width[0].offsetWidth * 0.89;
   console.log(properyImageWidth);
 
   if (!isMovedRight) {
     slider.style.transform = `translateX(-${properyImageWidth}px)`;
-    diagnosisImage.src = "assets/images/home/general/diagnosis-dashboard-after.jpg";
     slider.style.background = "linear-gradient(90deg, #18856a 0%, #24c2b5 100%)";
     logo.style.background = "linear-gradient(90deg, #18856a 0%, #24c2b5 100%)";
+    timeDelay = 1000; // 0.5 seconds
+    diagnosisImage.src = "assets/images/home/general/diagnosis-dashboard-after.jpg";
+
   } else {
     slider.style.transform = "translateX(0px)";
-    diagnosisImage.src = "assets/images/home/general/diagnosis-dashboard.jpg";
     slider.style.background = "linear-gradient(90deg, #FF4562 0%, #B53A4D 100%)";
     logo.style.background = "linear-gradient(90deg, #FF4562 0%, #B53A4D 100%)";
+    timeDelay = 1000; // 0.5 seconds
+
+    diagnosisImage.src = "assets/images/home/general/diagnosis-dashboard.jpg";
+
   }
 
   isMovedRight = !isMovedRight;

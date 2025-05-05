@@ -238,102 +238,124 @@ setInterval(animateText, 3000);
       </div>
     </div>
   </section>
-    <section class="how-it-works">
-      <div class="how-title">
-        <h2>How Supershyft works ?</h2>
-      </div>
-      <div
-        class="how-step"
-        style="background: var(--Light-green, rgba(6, 53, 51, 0.1))"
-      >
-        <div class="how-step-number">1.</div>
-        <div>
-          <div class="how-step-title">Schedule Your Bio AI Test</div>
-          <div class="how-step-description">
-            Instantly schedule blood tests on our platform and answer your
-            lifestyle questions.
+  <section class="how-it-works">
+    <div class="how-title">
+      <h2>How Supershyft works?</h2>
+    </div>
+  
+    <div class="how-content">
+      <div class="how-steps"  >
+        <div class="how-step" id="howSteps1" onclick="changeVideo('./assets/videos/home/video1.mp4', 'howSteps1')">
+          <div class="how-step-number">1.</div>
+          <div>
+            <div class="how-step-title">Schedule Your Bio AI Test</div>
+            <div class="how-step-description">
+              Instantly schedule blood tests on our platform and answer your lifestyle questions.
+            </div>
           </div>
         </div>
-      </div>
-
-      <div
-        class="how-step">
-        <div class="how-step-number">2.</div>
-        <div>
-          <div class="how-step-title">Get Your Supershyft Report</div>
-          <div class="how-step-description">
-            Our advanced algorithms predict risks for 12+ metabolic diseases.
-
+  
+        <div class="how-step " id="howSteps2" onclick="changeVideo('./assets/videos/home/video2.mp4', 'howSteps2')">
+          <div class="how-step-number">2.</div>
+          <div>
+            <div class="how-step-title">Get Your Supershyft Report</div>
+            <div class="how-step-description">
+              Our advanced algorithms predict risks for 12 metabolic diseases.
+            </div>
           </div>
         </div>
-      </div>
+  
+        <div class="how-step" id="howSteps3" onclick="changeVideo('./assets/videos/home/video3.mp4', 'howSteps3')">
+          <div class="how-step-number">3.</div>
+          <div>
+            <div class="how-step-title">Lifestyle Assessment</div>
+            <div class="how-step-description">
+              Get a completely personalized lifestyle plan including your nutrition plan and workouts based on your Supershft report.
+            </div>
+          </div>
+        </div>
+  
+        <div class="how-step" id="howSteps4" onclick="changeVideo('./assets/videos/home/video4.mp4', 'howSteps4')">
+          <div class="how-step-number">4.</div>
+          <div>
+            <div class="how-step-title">Take Action. Test Again.</div>
+            <div class="how-step-description">
+              Test every few months to watch your health progress over time.
+            </div>
+          </div>
+        </div>
+        <button class="cta-button" >Get Supershyft Today</button>
 
+      </div>
+  
+      <div class="mobile-frame">
+        <div class="mobile-screen">
+          <video
+  id="howVideo"
+  autoplay
+  muted
+  loop
+  playsinline
+  disablepictureinpicture
+  controlslist="nodownload nofullscreen noremoteplayback"
+>
+  <source src="./assets/videos/home/video1.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    var preStep = document.getElementById('howSteps1');
+    function changeVideo(videoSrc = './assets/videos/home/video1.mp4', stepId = 'howSteps1') {
+      const video = document.getElementById('howVideo');
+      const steps = document.getElementById(stepId);
+      video.src = videoSrc;
+      video.play();
     
 
-      <div class="how-step">
-        <div class="how-step-number">3.</div>
-        <div>
-          <div class="how-step-title">Lifestyle Assessment</div>
-          <div class="how-step-description">
-            Get a completely personalized lifestyle plan including your
-            nutrition plan and workouts based on your Supershft report.
-          </div>
-        </div>
-      </div>
-      <div class="how-step">
-        <div class="how-step-number">4.</div>
-        <div>
-          <div class="how-step-title">Take Action. Test Again.</div>
-          <div class="how-step-description">
-            Test every few months to watch your health progress over time
-          </div>
-        </div>
-      </div>
-      <!-- Repeat for steps 2, 3, 4 -->
-      <button class="cta-button"><span>Get Supershyft Today</span></button>
-    </section>
+      preStep = steps;
+    }
+  </script>
+  
     
-    <section class="why-supershyft" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">
+    <section class="why-supershyft" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/home/general/bg1.jpg') center/cover no-repeat;">
       <div class="why-supershyft-container">
     
-        <h2>Why Supershyft?</h2>
+        <h2>Why People Choose SuperShyft ?</h2>
+      </div>
+
     
         <div class="why-supershyft-detail">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th>Brand</th>
-                <th>Affordability</th>
-                <th>Compliance</th>
-                <th>Disease Risk Predictions</th>
-                <th>Metabolic Insights</th>
-                <th>Physiological Blood Marker Analysis</th>
-                <th>Doctor Recommended</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Brand"><img src="assets/images/superSyft.png" alt="SuperShyft Logo" /></td>
-                <td data-label="Affordability"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Compliance"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Disease Risk Predictions"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Metabolic Insights"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Physiological Blood Marker Analysis"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Doctor Recommended"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-              </tr>
-              <tr>
-                <td data-label="Brand">Other Brands</td>
-                <td data-label="Affordability"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-                <td data-label="Compliance"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></td>
-                <td data-label="Disease Risk Predictions"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-                <td data-label="Metabolic Insights"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-                <td data-label="Physiological Blood Marker Analysis"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-                <td data-label="Doctor Recommended"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></td>
-              </tr>
-            </tbody>
-          </table>
+            <div class="brand">Brand</div>
+            <div class="brand-item1">Affordability</div>
+            <div class="brand-item2">Compliance</div>
+            <div class="brand-item3">Disease Risk Predictions</div>
+            <div class="brand-item4">Metabolic Insights</div>
+            <div class="brand-item5">Physiological Blood Marker Analysis</div>
+            <div class="brand-item6">Doctor Recommended</div>
+
+
+            <div class="brand-logo-head"><img class="brand-logo" src="assets/images/home/icons/super-shyft-logo-final-031.svg" alt="SuperShyft Logo"/></div>
+            <div class="brand-logo-item1"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></div>
+            <div class="brand-logo-item2"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></div>
+            <div class="brand-logo-item3"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></div>
+            <div class="brand-logo-item4"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></div>
+            <div class="brand-logo-item5"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></div>
+            <div class="brand-logo-item6"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></div>
+
+
+            <div class="other-brand">Other Brands</div>
+            <div class="other-brand-item1"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></div>
+            <div class="other-brand-item2"><img src="assets/images/home/icons/tick-circle.svg" alt="Tick" /></div>
+            <div class="other-brand-item3"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></div>
+            <div class="other-brand-item4"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></div>
+            <div class="other-brand-item5"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></div>
+            <div class="other-brand-item6"><img src="assets/images/home/icons/close-circle.svg" alt="Cross" /></div>
+
         </div>
-      </div>
     </section>
     
     <section class="why-supershyft" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">

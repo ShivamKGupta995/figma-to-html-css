@@ -530,10 +530,18 @@ html {
     border-radius: 38px;
     border: 2px solid rgba(0, 0, 0, 0.25);
   }
+  #slider{
+
+    width: 5px;
+    right: 4%;
+  }
+
+  #diagnosis-superceft-logo{
+    width: 50px;
+    right: 25px;
+
+  }
 }
-
-
-
 
 
 /* Core Section */

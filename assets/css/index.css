@@ -208,7 +208,7 @@ html {
 
 @media screen and (max-width: 780px) {
   .hero {
-    width: 440px;
+    width: 100%;
     height: 953px;
 
   }
@@ -302,82 +302,256 @@ html {
 /* Diagnosis Section */
 
 .diagnosis-section {
+  width: 100%;
   background: #fff;
-  padding: 5rem 1.5rem;
+  padding: 93px 80px;
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
   align-items: center;
+  row-gap: 72px; /* ← use row-gap for vertical spacing */
 }
 
-.diagnosis-text .section-tag {
-  color: #f8485e;
-  letter-spacing: 2px;
-  font-weight: 500;
-  margin-bottom: 0.625rem;
-  font-size: 0.875rem;
+
+.diagnosis-text {
+  width: 710px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
 }
 
-.diagnosis-text .section-title {
-  font-size: 3rem;
-  font-weight: 700;
+.diagnosis-text-header {
+  width: 538px;
+  height: 152px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 14px;
+}
+
+
+
+.section-tag-container {
+  width: 178px;
+  height: 26px;
+
+}
+
+.section-tag {
+  color: #CC203B;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.6px;
+  text-transform: uppercase;
+}
+.section-title{
   color: #000;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 104px;
+  letter-spacing: -4px;
+  align-self: stretch;
 }
 
-.diagnosis-text .section-subtitle {
-  font-size: 1.125rem;
-  color: #333;
-  margin-top: 0.625rem;
-  line-height: 1.6;
+.section-subtitle{
+  color: var(--Neutral-Black, #000);
+  text-align: center;
+  font-family: Sora;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+  letter-spacing: 0.4px;
 }
-
-.diagnosis-text .section-note {
-  font-size: 0.875rem;
-  color: #888;
+.section-note {
+  color: var(--Neutral-Black-200, #636363);
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 18px;
   font-style: italic;
-  margin-top: 0.9375rem;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .diagnosis-image {
-  margin-top: 2.5rem;
-  max-width: 1000px;
-  width: 100%;
+  width: 1130px;
+  height: 538px;
+  position: relative;
 }
 
-.diagnosis-image img {
+#diagnosis-image-before {
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  border-radius: 38px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+}
+#slider{
+  position: absolute;
+  top: 0px;
+  right: 5%;
+  width: 10px;
+  height: 100%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background: linear-gradient(90deg, #FF4562 0%, #B53A4D 100%);
+  z-index: 2;
+  transition: transform 1s ease-in-out;
+
 }
 
+@keyframes animateSliderBackwards {
+  from {
+    right: 5%;
+    transform: translateX(0);
+  }
+  to {
+    right: 95%;
+    transform: translateX(100%);
+  }
+  
+}
+@keyframes animateSliderForwards {
+  from {
+    right: 95%;
+    transform: translateX(0);
+  }
+  to {
+    right: 5%;
+    transform: translateX(-100%);
+  }
+  
+}
+
+#diagnosis-superceft-logo {
+  position: relative;
+  top: 35%;
+  right: 40px;
+  width: 100px;
+  height: auto;
+  z-index: 1; /* Ensure it stays above the image */
+  background: linear-gradient(90deg, #FF4562 0%, #B53A4D 100%);  border-radius: 100%;
+}
 /* Responsive  */
-@media screen and (max-width: 768px) {
-  .diagnosis-text .section-title {
-    font-size: 2rem;
+@media screen and (max-width: 780px) {
+  .diagnosis-section{
+    width: 100%;
+    padding: 32px 24px;
+    row-gap: 24px;
+   } /* ← use row-gap for vertical spacing */
+  .diagnosis-text {
+    width: 408px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  
+  }
+  
+  .diagnosis-text-header {
+    width: 100%;
+    height: auto;
+    
+    row-gap: 0px;
+
+  }
+  
+  .section-tag-container {
+    width: 107px; 
+    height: 16px;    
+  }
+  
+  .section-tag {
+    color: #CC203B;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.76px;
+    text-transform: uppercase;
   }
 
-  .diagnosis-text .section-subtitle {
-    font-size: 1rem;
+  .section-title{
+    color: #000;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 31.778px; /* 88.272% */
+    letter-spacing: -1.44px;
+    align-self: stretch;
   }
-
+  
+  .section-subtitle{
+    color: var(--Neutral-Black, #000);
+    text-align: center;
+    font-family: Sora;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.24px;
+  }
+  .section-note {
+    color: var(--Neutral-Black-200, #636363);
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
   .diagnosis-image {
-    margin-top: 2rem;
+    width: 100%;
+    height: 243px;
+  }
+  
+  #diagnosis-image-before {
+    width: 100%;
+    height: 100%;
+    border-radius: 38px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+  }
+
+  #slider{
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    width: 8px;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: linear-gradient(90deg, #FF4562 0%, #B53A4D 100%);
+    z-index: 2;
+    transition: transform 1s ease-in-out;
+  
+
+  #diagnosis-superceft-logo {
+    width: 50px;
+    right: 20px;
+
   }
 }
 
-@media screen and (max-width: 480px) {
-  .diagnosis-text .section-title {
-    font-size: 1.5rem;
-  }
-
-  .diagnosis-text .section-subtitle {
-    font-size: 0.95rem;
-  }
-
-  .diagnosis-text .section-note {
-    font-size: 0.8rem;
-  }
-}
 
 
 

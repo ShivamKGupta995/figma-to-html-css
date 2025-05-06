@@ -312,7 +312,8 @@ html {
   justify-content: center;
   align-content: center;
   align-items: center;
-  row-gap: 72px; /* ← use row-gap for vertical spacing */
+  row-gap: 72px;
+  /* ← use row-gap for vertical spacing */
 }
 
 
@@ -353,7 +354,8 @@ html {
   letter-spacing: 4.6px;
   text-transform: uppercase;
 }
-.section-title{
+
+.section-title {
   color: #000;
   text-align: center;
   font-family: "DM Sans";
@@ -365,16 +367,18 @@ html {
   align-self: stretch;
 }
 
-.section-subtitle{
+.section-subtitle {
   color: var(--Neutral-Black, #000);
   text-align: center;
   font-family: Sora;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 160% */
+  line-height: 32px;
+  /* 160% */
   letter-spacing: 0.4px;
 }
+
 .section-note {
   color: var(--Neutral-Black-200, #636363);
   text-align: center;
@@ -397,7 +401,8 @@ html {
   border-radius: 38px;
   border: 2px solid rgba(0, 0, 0, 0.25);
 }
-#slider{
+
+#slider {
   position: absolute;
   top: 0px;
   right: 5%;
@@ -418,22 +423,25 @@ html {
     right: 5%;
     transform: translateX(0);
   }
+
   to {
     right: 95%;
     transform: translateX(100%);
   }
-  
+
 }
+
 @keyframes animateSliderForwards {
   from {
     right: 95%;
     transform: translateX(0);
   }
+
   to {
     right: 5%;
     transform: translateX(-100%);
   }
-  
+
 }
 
 #diagnosis-superceft-logo {
@@ -442,16 +450,21 @@ html {
   right: 40px;
   width: 100px;
   height: auto;
-  z-index: 1; /* Ensure it stays above the image */
-  background: linear-gradient(90deg, #FF4562 0%, #B53A4D 100%);  border-radius: 100%;
+  z-index: 1;
+  /* Ensure it stays above the image */
+  background: linear-gradient(90deg, #FF4562 0%, #B53A4D 100%);
+  border-radius: 100%;
 }
+
 /* Responsive  */
 @media screen and (max-width: 780px) {
-  .diagnosis-section{
+  .diagnosis-section {
     width: 100%;
     padding: 32px 24px;
     row-gap: 24px;
-   } /* ← use row-gap for vertical spacing */
+  }
+
+  /* ← use row-gap for vertical spacing */
   .diagnosis-text {
     width: 408px;
     height: auto;
@@ -459,22 +472,22 @@ html {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
-  
+
   }
-  
+
   .diagnosis-text-header {
     width: 100%;
     height: auto;
-    
+
     row-gap: 0px;
 
   }
-  
+
   .section-tag-container {
-    width: 107px; 
-    height: 16px;    
+    width: 107px;
+    height: 16px;
   }
-  
+
   .section-tag {
     color: #CC203B;
     text-align: center;
@@ -487,19 +500,20 @@ html {
     text-transform: uppercase;
   }
 
-  .section-title{
+  .section-title {
     color: #000;
     text-align: center;
     font-family: "DM Sans";
     font-size: 36px;
     font-style: normal;
     font-weight: 900;
-    line-height: 31.778px; /* 88.272% */
+    line-height: 31.778px;
+    /* 88.272% */
     letter-spacing: -1.44px;
     align-self: stretch;
   }
-  
-  .section-subtitle{
+
+  .section-subtitle {
     color: var(--Neutral-Black, #000);
     text-align: center;
     font-family: Sora;
@@ -509,6 +523,7 @@ html {
     line-height: normal;
     letter-spacing: 0.24px;
   }
+
   .section-note {
     color: var(--Neutral-Black-200, #636363);
     text-align: center;
@@ -518,25 +533,26 @@ html {
     font-weight: 400;
     line-height: normal;
   }
-  
+
   .diagnosis-image {
     width: 100%;
     height: 243px;
   }
-  
+
   #diagnosis-image-before {
     width: 100%;
     height: 100%;
     border-radius: 38px;
     border: 2px solid rgba(0, 0, 0, 0.25);
   }
-  #slider{
+
+  #slider {
 
     width: 5px;
     right: 4%;
   }
 
-  #diagnosis-superceft-logo{
+  #diagnosis-superceft-logo {
     width: 50px;
     right: 25px;
 
@@ -953,7 +969,7 @@ html {
 .mobile-frame {
   width: 564px;
   /* increased from 320px */
-  height:  890px;
+  height: 890px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -965,7 +981,7 @@ html {
 }
 
 .mobile-screen {
-  position:absolute;
+  position: absolute;
   top: 0px;
   width: 100%;
   height: 100%;
@@ -1007,10 +1023,10 @@ html {
 }
 
 
-.cta-button:hover{
+.cta-button:hover {
   background: linear-gradient(90deg, #FF5E77 0%, #CC203B 100%);
   transition: all 0.3s ease-in-out;
-  
+
 }
 
 /* Responsive Styles */
@@ -1107,11 +1123,11 @@ html {
   display: grid;
   grid: auto / auto auto auto auto auto auto auto;
   /* grid-gap: 16px; */
-  
+
 }
 
 .why-supershyft-detail div {
- /* border-bottom: 2px solid rgba(0, 0, 0, 0.20); */
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.20); */
   color: #063533;
   padding: 5px;
   text-align: center;
@@ -1119,26 +1135,29 @@ html {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
+  line-height: 130%;
+  /* 26px */
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
+
 }
+
 .brand,
 .brand-item1,
 .brand-item2,
 .brand-item3,
 .brand-item4,
-.brand-item5{
+.brand-item5 {
   padding: 30px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.20);
   border-right: 2px solid rgba(0, 0, 0, 0.20);
 
 }
-.brand-item6{
+
+.brand-item6 {
   padding: 30px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.20);
 }
@@ -1154,7 +1173,7 @@ html {
 .other-brand-item3,
 .other-brand-item4,
 .other-brand-item1,
-.other-brand-item5{
+.other-brand-item5 {
   padding: 30px;
 
   border-right: 2px solid rgba(0, 0, 0, 0.20);
@@ -1170,7 +1189,7 @@ html {
   flex-shrink: 0;
   aspect-ratio: 1/1;
 
-  
+
 }
 
 /* Responsive tweaks */
@@ -1188,10 +1207,11 @@ html {
     width: 350px;
     height: auto;
     padding: 10px;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(7, auto);
 
   }
+
   .why-supershyft-detail div {
     /* border-right: 2px solid rgba(0, 0, 0, 0.20);
     border-bottom: 2px solid rgba(0, 0, 0, 0.20); */
@@ -1202,155 +1222,177 @@ html {
     font-size: 13.084px;
     font-style: normal;
     font-weight: 500;
-    line-height: 130%; /* 17.009px *//* 26px */
+    line-height: 130%;
+    /* 17.009px */
+    /* 26px */
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
+
   }
-  .brand{
+
+  .brand {
     border-right: 2px solid rgba(0, 0, 0, 0.20);
 
   }
-  .brand-item1{
-    grid-column: 1/2;
-    grid-row:2/3;
-        border-right: 2px solid rgba(0, 0, 0, 0.20);
 
-  }
-  .brand-item2{
+  .brand-item1 {
     grid-column: 1/2;
-    grid-row:3/4;
-        border-right: 2px solid rgba(0, 0, 0, 0.20);
-
-  }
-  .brand-item3{
-    grid-column: 1/2;
-    grid-row:4/5;
-        border-right: 2px solid rgba(0, 0, 0, 0.20);
-
-  }
-  .brand-item4{
-    grid-column: 1/2;
-    grid-row:5/6;
-        border-right: 2px solid rgba(0, 0, 0, 0.20);
-
-  }
-  .brand-item5{
-    grid-column: 1/2;
-    grid-row:6/7;
+    grid-row: 2/3;
     border-right: 2px solid rgba(0, 0, 0, 0.20);
 
   }
-  .brand-item6{
+
+  .brand-item2 {
     grid-column: 1/2;
-    grid-row:7/8;
+    grid-row: 3/4;
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
+
+  }
+
+  .brand-item3 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
+
+  }
+
+  .brand-item4 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
+
+  }
+
+  .brand-item5 {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
+
+  }
+
+  .brand-item6 {
+    grid-column: 1/2;
+    grid-row: 7/8;
     border-right: 2px solid rgba(0, 0, 0, 0.20);
     border-bottom: none;
 
   }
 
-  .brand-logo-head{
+  .brand-logo-head {
     grid-column: 2/3;
-    grid-row:1/2;
+    grid-row: 1/2;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
     border-right: 2px solid rgba(0, 0, 0, 0.20);
 
   }
-  .brand-logo-item1{
+
+  .brand-logo-item1 {
     grid-column: 2/3;
-    grid-row:2/3;
+    grid-row: 2/3;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
     border-right: 2px solid rgba(0, 0, 0, 0.20);
 
 
   }
-  .brand-logo-item2{
+
+  .brand-logo-item2 {
     grid-column: 2/3;
-    grid-row:3/4;
+    grid-row: 3/4;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-        border-right: 2px solid rgba(0, 0, 0, 0.20);
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
 
 
   }
-  .brand-logo-item3{
+
+  .brand-logo-item3 {
     grid-column: 2/3;
-    grid-row:4/5;
+    grid-row: 4/5;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-        border-right: 2px solid rgba(0, 0, 0, 0.20);
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
 
 
   }
-  .brand-logo-item4{
+
+  .brand-logo-item4 {
     grid-column: 2/3;
-    grid-row:5/6;
+    grid-row: 5/6;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-        border-right: 2px solid rgba(0, 0, 0, 0.20);
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
 
 
   }
-  .brand-logo-item5{
+
+  .brand-logo-item5 {
     grid-column: 2/3;
-    grid-row:6/7;
+    grid-row: 6/7;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-        border-right: 2px solid rgba(0, 0, 0, 0.20);
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
 
 
   }
-  .brand-logo-item6{
+
+  .brand-logo-item6 {
     grid-column: 2/3;
-    grid-row:7/8;
-        border-right: 2px solid rgba(0, 0, 0, 0.20);
+    grid-row: 7/8;
+    border-right: 2px solid rgba(0, 0, 0, 0.20);
 
 
   }
-  .other-brand{
+
+  .other-brand {
     grid-column: 3/4;
-    grid-row:1/2;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-    border-right:none;
-
-  }
-  .other-brand-item1{
-    grid-column: 3/4;
-    grid-row:2/3;
+    grid-row: 1/2;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
     border-right: none;
 
   }
-  .other-brand-item2{
+
+  .other-brand-item1 {
     grid-column: 3/4;
-    grid-row:3/4;
+    grid-row: 2/3;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
     border-right: none;
 
   }
-  .other-brand-item3{
+
+  .other-brand-item2 {
     grid-column: 3/4;
-    grid-row:4/5;
+    grid-row: 3/4;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
     border-right: none;
 
   }
-  .other-brand-item4{
+
+  .other-brand-item3 {
     grid-column: 3/4;
-    grid-row:5/6;
+    grid-row: 4/5;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
     border-right: none;
 
   }
-  .other-brand-item5{
+
+  .other-brand-item4 {
     grid-column: 3/4;
-    grid-row:6/7;
+    grid-row: 5/6;
     border-bottom: 2px solid rgba(0, 0, 0, 0.20);
-    border-right:none;
-    
+    border-right: none;
+
   }
-  .other-brand-item6{
+
+  .other-brand-item5 {
     grid-column: 3/4;
-    grid-row:7/8;
+    grid-row: 6/7;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+    border-right: none;
+
+  }
+
+  .other-brand-item6 {
+    grid-column: 3/4;
+    grid-row: 7/8;
 
   }
 
@@ -1720,16 +1762,16 @@ html {
 }
 
 .testimonial {
-  width: 100%;
-  min-width: 100%;
-  /* for mobile */
-  padding: 60px 30px;
-  background: linear-gradient(135deg, #a7335f, #1d3a3f);
+  width: 880px;
+  height: 520px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #D33851 0%, #063533 100%);
+  padding: 12px 28px 27px 48px;
   color: white;
-  border-radius: 20px;
   display: flex;
-  align-items: center;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: start;
   box-sizing: border-box;
   flex-shrink: 0;
 
@@ -1744,7 +1786,13 @@ html {
   flex-shrink: 0;
 
 }
-
+.testimonial-image-container{
+  padding: 3px;
+  width: 240px;
+  height: 400px;
+  flex-shrink: 0;
+  aspect-ratio: 3/5;
+}
 .testimonial-image img {
   height: auto;
   width: 100%;
@@ -1754,6 +1802,9 @@ html {
 
 
 .testimonial-image-detail {
+  height: 32px;
+  flex-shrink: 0;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1774,9 +1825,10 @@ html {
 }
 
 .author-role {
+
   color: #FFF;
   text-align: center;
-  font-family: Sora;
+  font-family: 'Sora';
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -1790,6 +1842,7 @@ html {
 
 .quote {
   color: #FFF;
+  height: 86.788px;
   font-family: "Times New Roman";
   font-size: 143.27px;
   font-style: normal;
@@ -1800,6 +1853,8 @@ html {
 }
 
 .testimonial-text h2 {
+  margin-top: 10px;
+
   color: var(--Neutral-White, #FFF);
   font-family: "DM Sans";
   font-size: 32px;
@@ -1810,6 +1865,7 @@ html {
 }
 
 .testimonial-text p {
+  margin-top: 10px;
   color: #FFF;
   font-family: Sora;
   font-size: 18px;

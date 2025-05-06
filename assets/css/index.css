@@ -208,7 +208,7 @@ html {
 
 @media screen and (max-width: 780px) {
   .hero {
-    width: 100%;
+    width: 440px;
     height: 953px;
 
   }
@@ -299,6 +299,7 @@ html {
 }
 
 
+/* Diagnosis Section */
 /* Diagnosis Section */
 
 .diagnosis-section {
@@ -529,27 +530,6 @@ html {
     border-radius: 38px;
     border: 2px solid rgba(0, 0, 0, 0.25);
   }
-
-  #slider{
-    position: absolute;
-    top: 0px;
-    right: 5%;
-    width: 8px;
-    height: 100%;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background: linear-gradient(90deg, #FF4562 0%, #B53A4D 100%);
-    z-index: 2;
-    transition: transform 1s ease-in-out;
-  
-
-  #diagnosis-superceft-logo {
-    width: 50px;
-    right: 20px;
-
-  }
 }
 
 
@@ -648,17 +628,6 @@ html {
 .core-media video:hover,
 .core-media img:hover {
   transform: scale(1.02);
-}
-
-/* Stylish Divider */
-hr {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, #CC203B, #063533);
-  margin: 40px auto;
-  width: 80%;
-  opacity: 0.5;
-  border-radius: 5px;
 }
 
 
@@ -906,6 +875,7 @@ hr {
 
 .how-steps {
   width: 692px;
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -913,9 +883,8 @@ hr {
 
 .how-step {
   padding: 32px 24px;
-  background: #f8f8f8;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -941,15 +910,15 @@ hr {
 
 .how-step-title {
   width: 531px;
-
-  color: #000;
-  align-self: stretch;
+  color: var(--Primary-green, #063533);
   /* H2 Med */
   font-family: "DM Sans";
   font-size: 28px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  align-self: stretch;
+
 }
 
 .how-step-description {
@@ -963,6 +932,7 @@ hr {
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0.4px;
+  align-self: stretch;
 }
 
 .how-content {
@@ -1018,7 +988,7 @@ hr {
   /* 188.235% */
   letter-spacing: 0.34px;
   display: flex;
-  width: 213px;
+  /* width: 213px; */
   height: 48px;
   padding: 8px 16px;
   justify-content: center;
@@ -1119,7 +1089,7 @@ hr {
 }
 
 .why-supershyft-detail {
-  width: 1200px;
+  width: 100%;
   height: 401px;
   margin: 16px;
   border: 2px solid black;

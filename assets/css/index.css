@@ -1043,9 +1043,9 @@ letter-spacing: -1.44px;
 
 
 
-.cta-button {
+.how-step-cta-button {
+  display: flex;
   color: #FFF;
-
   text-align: center;
   font-family: "DM Sans";
   font-size: 17px;
@@ -1066,69 +1066,33 @@ letter-spacing: -1.44px;
 }
 
 
-.cta-button:hover {
+.how-step-cta-button:hover {
   background: linear-gradient(90deg, #FF5E77 0%, #CC203B 100%);
   transition: all 0.3s ease-in-out;
 
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  /* .how-it-works {
-    padding: 40px 20px;
-    gap: 64px;
-  }
-
-  .how-title h2 {
-    font-size: 36px;
-    line-height: 42px;
-    letter-spacing: -1px;
-  }
-
-  .how-step {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 16px;
-    max-width: 100%;
-  }
-
-  .how-step-number {
-    font-size: 28px;
-  }
-
-  .how-step-title {
-    font-size: 20px;
-  }
-
-  .how-step-description {
-    font-size: 16px;
-    line-height: 28px;
-  }
-
-  .cta-button {
-    width: 100%;
-    justify-content: center;
-  } */
-}
-
 .make-scrolle-dash-container {
   display: none;
 }
+/* Responsive Styles */
+
+
 
 @media (max-width: 480px) {
   .how-it-works {
     width: 100%;
+    margin: 0px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    column-gap: 60px;
+    row-gap: 32px;
   }
 
   .how-title {
     text-align: center;
-    padding: 0 20px;
+    padding: 0px;
   }
 
   .how-title h2 {
@@ -1138,41 +1102,38 @@ letter-spacing: -1.44px;
     font-style: normal;
     font-weight: 800;
     line-height: 31.176px;
-    /* 103.922% */
     letter-spacing: -1.2px;
     transition: font-size 0.3s ease;
   }
 
   .how-content {
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: auto;
-    gap: 60px;
+    row-gap: 32px;
   }
 
   .how-steps {
     height: min-content;
+    padding: 0px;
+
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    overflow: hidden;
   }
 
   .how-step {
-    width: 80%;
+    width: 377px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: start;
+    gap: 10px;
+    align-items: start;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
   }
 
   .how-step:hover {
@@ -1181,6 +1142,7 @@ letter-spacing: -1.44px;
   }
 
   .how-step-number {
+    width: auto;
     color: #063533;
     text-align: center;
     font-family: "DM Sans";
@@ -1191,6 +1153,7 @@ letter-spacing: -1.44px;
   }
 
   .how-step-title {
+    width: auto;
     color: var(--Primary-green, #063533);
     font-family: "DM Sans";
     font-size: 20px;
@@ -1200,6 +1163,7 @@ letter-spacing: -1.44px;
   }
 
   .how-step-description {
+    width: 100%;
     color: var(--Neutral-Black-400, #505050);
     font-family: "DM Sans";
     font-size: 14px;
@@ -1209,6 +1173,16 @@ letter-spacing: -1.44px;
     /* 115.607% */
     letter-spacing: 0.28px;
   }
+  #howSteps2,
+  #howSteps3,
+  #howSteps4{
+    display: none;
+  }
+
+  
+.how-step-cta-button{
+  display: none;
+}
 
   .make-scrolle-dash-container {
     display: flex;
@@ -1222,8 +1196,11 @@ letter-spacing: -1.44px;
   .make-scrolle-dash {
     width: 20%;
     height: 100%;
-    background: white;
+    background: #FFFFFF;
     border: 1px solid black;
+  }
+  #howSteps1Dash{
+    background:green;
   }
 
   /* Mobile Frame */
@@ -1253,27 +1230,8 @@ letter-spacing: -1.44px;
 
   }
 
-  .cta-button {
-    display: none;
-  }
-
-  /*   
-  .how-title h2 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .how-step-number {
-    font-size: 24px;
-  }
-
-  .how-step-title {
-    font-size: 18px;
-  }
-
-  .how-step-description {
-    font-size: 15px;
-  } */
+  
+ 
 }
 
 

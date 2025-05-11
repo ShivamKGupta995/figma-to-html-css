@@ -299,7 +299,7 @@
       </div>
     </div>
 
-    
+
   </section>
   <section class="how-it-works">
     <div class="how-title">
@@ -347,14 +347,14 @@
             </div>
           </div>
         </div>
-        <button class="cta-button" >Get Supershyft Today</button>
+        <button class="how-step-cta-button" >Get Supershyft Today</button>
 
       </div>
       <div class="make-scrolle-dash-container">
-        <div class="make-scrolle-dash" id="howSteps1Dash" onclick="changeVideo('./assets/videos/home/video1.mp4', 'howSteps1')"></div>
-        <div class="make-scrolle-dash" id="howSteps2Dash" onclick="changeVideo('./assets/videos/home/video2.mp4', 'howSteps2')"></div>
-        <div class="make-scrolle-dash" id="howSteps3Dash" onclick="changeVideo('./assets/videos/home/video3.mp4', 'howSteps3')"></div>
-        <div class="make-scrolle-dash" id="howSteps4Dash" onclick="changeVideo('./assets/videos/home/video4.mp4', 'howSteps4')"></div>
+        <div class="make-scrolle-dash" id="howSteps1Dash" onclick="changeVideoMobile('./assets/videos/home/video1.mp4', 'howSteps1', 'howSteps1Dash')"></div>
+        <div class="make-scrolle-dash" id="howSteps2Dash" onclick="changeVideoMobile('./assets/videos/home/video2.mp4', 'howSteps2', 'howSteps2Dash')"></div>
+        <div class="make-scrolle-dash" id="howSteps3Dash" onclick="changeVideoMobile('./assets/videos/home/video3.mp4', 'howSteps3', 'howSteps3Dash')"></div>
+        <div class="make-scrolle-dash" id="howSteps4Dash" onclick="changeVideoMobile('./assets/videos/home/video4.mp4', 'howSteps4', 'howSteps4Dash')"></div>
 
       </div>
   
@@ -378,17 +378,49 @@
   </section>
   
   <script>
-    var preStep = document.getElementById('howSteps1');
-    function changeVideo(videoSrc = './assets/videos/home/video1.mp4', stepId = 'howSteps1') {
-      const video = document.getElementById('howVideo');
-      const steps = document.getElementById(stepId);
+  // Set initial step
+  var preStep = document.getElementById('howSteps1');
+  var beforeDash = document.getElementById('howSteps1Dash')
+
+  function changeVideo(videoSrc = './assets/videos/home/video1.mp4', stepId = 'howSteps1') {
+    const video = document.getElementById('howVideo');
+    const steps = document.getElementById(stepId);
+    
+    if (video && steps) {
       video.src = videoSrc;
       video.play();
-    
-
       preStep = steps;
     }
-  </script>
+  }
+
+  function changeVideoMobile(videoSrc = './assets/videos/home/video1.mp4', stepId = 'howSteps1', howStepDash = "howSteps1Dash") {
+    const allIds = ["howSteps1", "howSteps2", "howSteps3", "howSteps4"];
+
+    for (let id of allIds) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.style.display = (id === stepId) ? "flex" : "none";
+      }
+    }
+    const dash = document.getElementById(howStepDash)
+    
+
+    dash.style.background = "green"
+    beforeDash.style.background = "#FFF"
+    beforeDash = dash
+
+    const video = document.getElementById('howVideo');
+    if (video) {
+      video.src = videoSrc;
+      video.play();
+    }
+
+    const steps = document.getElementById(stepId);
+    if (steps) {
+      preStep = steps;
+    }
+  }
+</script>
 
   <script>
     var preStep = document.getElementById('howSteps1');

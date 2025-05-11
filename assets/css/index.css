@@ -193,7 +193,7 @@ html {
   align-items: center;
   padding: 14px 24px;
   color: white;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman';
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
   font-size: x-large;
   gap: 10px;
   border-radius: 100px;
@@ -208,7 +208,7 @@ html {
 }
 
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 480px) {
   .hero {
     width: 100%;
     height: 953px;
@@ -294,15 +294,17 @@ html {
     overflow: visible;
     transition: all 0.3s ease-in-out;
   }
-  
+
   .cta-button-hero {
     /* width: 204px; */
+    position: absolute;
+    bottom: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 14px 24px;
+    padding: 24px;
     color: white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman';
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
     font-size: x-large;
     gap: 10px;
     border-radius: 100px;
@@ -333,6 +335,21 @@ html {
   /* ← use row-gap for vertical spacing */
 }
 
+/* ------------------------------------------- */
+/* ⚙️ Animate scale when diagnosis section is in view */
+/* ------------------------------------------- */
+
+.diagnosis-section {
+  transform: scale(0.07);
+  /* Base state: slightly smaller */
+  transition: transform 0.6s ease-in-out;
+  /* Smooth animation */
+}
+
+.diagnosis-section.scale-in {
+  transform: scale(1);
+  /* Scale to normal when visible */
+}
 
 .diagnosis-text {
   width: 710px;
@@ -473,7 +490,7 @@ html {
 }
 
 /* Responsive  */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 480px) {
   .diagnosis-section {
     width: 100%;
     padding: 32px 24px;
@@ -552,7 +569,6 @@ html {
 
   .diagnosis-image {
     width: 100%;
-    height: 243px;
   }
 
   #diagnosis-image-before {
@@ -580,8 +596,7 @@ html {
 .core-section {
   background-color: #fff;
   color: #000;
-  padding: 80px;
-  margin: 0 auto;
+  padding: 7% 10%;
   font-family: 'Inter', sans-serif;
 }
 
@@ -753,7 +768,7 @@ html {
 /* Base Styles */
 .health-risk-section {
   background: radial-gradient(circle at center, #0e2c26, #000);
-  /* padding: 6rem 2rem; */
+  padding: 6rem 0rem;
   overflow: hidden;
   color: white;
   font-family: 'Sora', sans-serif;
@@ -766,7 +781,7 @@ html {
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -1px;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .scroll-row {
@@ -779,11 +794,11 @@ html {
   display: flex;
   gap: 1.5rem;
   white-space: nowrap;
-  animation: scroll-left 10s linear infinite;
+  animation: scroll-left 2s linear infinite;
 }
 
 .scroll-row.right .scroll-content {
-  animation: scroll-right 10s linear infinite;
+  animation: scroll-right 2s linear infinite;
 }
 
 .pill,
@@ -1046,7 +1061,7 @@ html {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .how-it-works {
+  /* .how-it-works {
     padding: 40px 20px;
     gap: 64px;
   }
@@ -1081,10 +1096,155 @@ html {
   .cta-button {
     width: 100%;
     justify-content: center;
-  }
+  } */
 }
 
-@media (max-width: 480px) {
+.make-scrolle-dash-container {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .how-it-works {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+  }
+
+  .how-title {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .how-title h2 {
+    color: #000;
+    font-family: "DM Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 31.176px;
+    /* 103.922% */
+    letter-spacing: -1.2px;
+    transition: font-size 0.3s ease;
+  }
+
+  .how-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    gap: 60px;
+  }
+
+  .how-steps {
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+  }
+
+  .how-step {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .how-step:hover {
+    background: #e0f7fa;
+    transform: scale(1.05);
+  }
+
+  .how-step-number {
+    color: #063533;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .how-step-title {
+    color: var(--Primary-green, #063533);
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .how-step-description {
+    color: var(--Neutral-Black-400, #505050);
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.185px;
+    /* 115.607% */
+    letter-spacing: 0.28px;
+  }
+
+  .make-scrolle-dash-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 20%;
+    height: 3px;
+  }
+
+  .make-scrolle-dash {
+    width: 20%;
+    height: 100%;
+    background: white;
+    border: 1px solid black;
+  }
+
+  /* Mobile Frame */
+  .mobile-frame {
+    width: 320px;
+    height: 640px;
+    padding: 12px;
+    overflow: hidden;
+    position: relative;
+
+  }
+
+  .mobile-screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile-screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+
+  }
+
+  .cta-button {
+    display: none;
+  }
+
+  /*   
   .how-title h2 {
     font-size: 28px;
     line-height: 36px;
@@ -1100,7 +1260,7 @@ html {
 
   .how-step-description {
     font-size: 15px;
-  }
+  } */
 }
 
 
@@ -1425,7 +1585,6 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 88px;
-  ;
   flex-shrink: 0;
 }
 
@@ -1496,12 +1655,13 @@ html {
 .pricing-container-details div h2 {
   color: #FFF;
   text-align: center;
-  font-family: Sora;
+  font-family: 'Sora';
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 30px;
   /* 125% */
+  align-self: stretch;
 }
 
 .pricing-container-details div p {
@@ -1519,7 +1679,6 @@ html {
 .pricing-container-details div h3 {
   color: var(--Neutral-White, #FFF);
   text-align: center;
-
   /* Paragraph Semi */
   font-family: "DM Sans";
   font-size: 24px;
@@ -1743,9 +1902,10 @@ html {
 @media (max-width: 768px) {
   .client-logo-grid {
     gap: 5px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     /* 1 per row */
   }
+
   .client-logo-container {
     width: 140px;
     height: 140px;
@@ -1761,9 +1921,10 @@ html {
 @media (max-width: 480px) {
   .client-logo-grid {
     gap: 5px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     /* 1 per row */
   }
+
   .client-logo-container {
     width: 100px;
     height: 100px;
@@ -1831,13 +1992,15 @@ html {
   flex-shrink: 0;
 
 }
-.testimonial-image-container{
+
+.testimonial-image-container {
   padding: 3px;
   width: 240px;
   height: 400px;
   flex-shrink: 0;
   aspect-ratio: 3/5;
 }
+
 .testimonial-image img {
   height: auto;
   width: 100%;

@@ -23,12 +23,6 @@
       <nav class="navbar">
         <img src="assets/images/logos/company-logo.svg" alt="Logo" class="logo" onclick=toggleMenu() />
 
-        <!-- <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div> -->
-
         <ul class="nav-links" id="navLinks">
           <li><a href="#" class="nav-link">Home</a></li>
           <li><a href="#" class="nav-link">About</a></li>
@@ -117,46 +111,70 @@
 
     </div>
     <div class="diagnosis-image">
-      <img src="assets/images/home/general/diagnosis-dashboard.jpg" alt="Health Dashboard"  id="diagnosis-image-before"/>
+      <picture>
+  <source media="(max-width: 480px)" srcset="./assets/images/home/general/diagnosis-dashboard-after-mobile.jpeg">
+  <img src="./assets/images/home/general/diagnosis-dashboard.jpg" 
+       alt="Health Dashboard"  
+       id="diagnosis-image-before" />
+</picture>
+
       <div id="slider">
         <img src="assets/images/home/icons/super-shift-icon.svg" alt="Health Dashboard" id="diagnosis-superceft-logo" onclick="toggleSlider()"/>
       </div>
 
-      <script>
-        let isMovedRight = false;
+   <script>
+  let isMovedRight = false;
+  function toggleSlider() {
+    const slider = document.getElementById("slider");
+    const diagnosisImage = document.getElementById("diagnosis-image-before");
+    const logo = document.getElementById("diagnosis-superceft-logo");
+    const imageContainer = document.getElementsByClassName("diagnosis-image")[0];
+    const properImageWidth = imageContainer.offsetWidth * 0.89;
+    const width = window.innerWidth;
 
-function toggleSlider() {
-  const slider = document.getElementById("slider");
-  const diagnosisImage = document.getElementById("diagnosis-image-before");
-  const logo = document.getElementById("diagnosis-superceft-logo");
-  const image_width = document.getElementsByClassName("diagnosis-image");
-  const properyImageWidth = image_width[0].offsetWidth * 0.89;
-  console.log(properyImageWidth);
+    // Move the slider
+    if (!isMovedRight) {
+      slider.style.transform = `translateX(-${properImageWidth}px)`;
+      slider.style.background = "linear-gradient(90deg, #18856a 0%, #24c2b5 100%)";
+      logo.style.background = "linear-gradient(90deg, #18856a 0%, #24c2b5 100%)";
+      diagnosisImage.src = width <= 480
+        ? "assets/images/home/general/diagnosis-dashboard-after-mobile.jpeg"
+        : "assets/images/home/general/diagnosis-dashboard-after.jpg";
 
-  if (!isMovedRight) {
-    slider.style.transform = `translateX(-${properyImageWidth}px)`;
-    slider.style.background = "linear-gradient(90deg, #18856a 0%, #24c2b5 100%)";
-    logo.style.background = "linear-gradient(90deg, #18856a 0%, #24c2b5 100%)";
-    timeDelay = 1000; // 0.5 seconds
-    diagnosisImage.src = "assets/images/home/general/diagnosis-dashboard-after.jpg";
+    } else {
+      slider.style.transform = "translateX(0px)";
+      slider.style.background = "linear-gradient(90deg, #FF4562 0%, #B53A4D 100%)";
+      logo.style.background = "linear-gradient(90deg, #FF4562 0%, #B53A4D 100%)";
 
-  } else {
-    slider.style.transform = "translateX(0px)";
-    slider.style.background = "linear-gradient(90deg, #FF4562 0%, #B53A4D 100%)";
-    logo.style.background = "linear-gradient(90deg, #FF4562 0%, #B53A4D 100%)";
-    timeDelay = 1000; // 0.5 seconds
+      diagnosisImage.src = width <= 480
+        ? "assets/images/home/general/diagnosis-dashboard-before-mobile.jpeg"
+        : "assets/images/home/general/diagnosis-dashboard.jpg";
+    }
 
-    diagnosisImage.src = "assets/images/home/general/diagnosis-dashboard.jpg";
-
+    isMovedRight = !isMovedRight;
   }
+</script>
 
-  isMovedRight = !isMovedRight;
-}
-
-        
-      </script>
       
     </div>
+    <script>
+  // ✅ Apply scale effect every time user scrolls into diagnosis-section
+  document.addEventListener("DOMContentLoaded", () => {
+    const diagnosisSection = document.querySelector(".diagnosis-section");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          diagnosisSection.classList.add("scale-in");
+        } else {
+          diagnosisSection.classList.remove("scale-in"); // Reset when out of view
+        }
+      });
+    }, { threshold: 0.5 }); // Trigger when 50% of section is visible
+
+    observer.observe(diagnosisSection);
+  });
+</script>
   </section>
 
   <section class="core-section">
@@ -330,6 +348,13 @@ function toggleSlider() {
         <button class="cta-button" >Get Supershyft Today</button>
 
       </div>
+      <div class="make-scrolle-dash-container">
+        <div class="make-scrolle-dash" id="howSteps1Dash" onclick="changeVideo('./assets/videos/home/video1.mp4', 'howSteps1')"></div>
+        <div class="make-scrolle-dash" id="howSteps2Dash" onclick="changeVideo('./assets/videos/home/video2.mp4', 'howSteps2')"></div>
+        <div class="make-scrolle-dash" id="howSteps3Dash" onclick="changeVideo('./assets/videos/home/video3.mp4', 'howSteps3')"></div>
+        <div class="make-scrolle-dash" id="howSteps4Dash" onclick="changeVideo('./assets/videos/home/video4.mp4', 'howSteps4')"></div>
+
+      </div>
   
       <div class="mobile-frame">
         <div class="mobile-screen">
@@ -353,6 +378,19 @@ function toggleSlider() {
   <script>
     var preStep = document.getElementById('howSteps1');
     function changeVideo(videoSrc = './assets/videos/home/video1.mp4', stepId = 'howSteps1') {
+      const video = document.getElementById('howVideo');
+      const steps = document.getElementById(stepId);
+      video.src = videoSrc;
+      video.play();
+    
+
+      preStep = steps;
+    }
+  </script>
+
+  <script>
+    var preStep = document.getElementById('howSteps1');
+    function changeVideoResponsive(videoSrc = './assets/videos/home/video1.mp4', stepId = 'howSteps1', dash="howSteps1Dash") {
       const video = document.getElementById('howVideo');
       const steps = document.getElementById(stepId);
       video.src = videoSrc;
@@ -401,7 +439,7 @@ function toggleSlider() {
         </div>
     </section>
     
-    <section class="why-supershyft" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">
+    <section class="why-supershyft" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/home/general/bg1.jpg') center/cover no-repeat;">
     <div class="pricing-container">
       <div class="pricing-container-title">
         <h2>What Costs You <del>₹9,999</del> is ₹1,999/</h2>
@@ -443,7 +481,7 @@ function toggleSlider() {
   </section>
 
   <section class="client-logo-header"
-    style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/bg.png') center/cover no-repeat;">
+    style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 66.2%, #000 100%), url('assets/images/home/general/bg1.jpg') center/cover no-repeat;">
     <div class="client-logo-container-head">
       <h2>Our Client</h2>
 

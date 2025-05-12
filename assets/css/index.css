@@ -629,6 +629,9 @@ html {
   flex: 1 1 300px;
   color: #000;
 }
+#core-text-mob{
+  display: none;
+}
 
 .core-text h3 {
   font-family: "DM Sans", sans-serif;
@@ -688,7 +691,9 @@ html {
 }
 
 
-
+#core-text-desktop{
+    display: block;
+  }
 
 /* Responsive Styling */
 
@@ -836,6 +841,12 @@ html {
 
     font-size: 32px;
     margin-bottom: 20px;
+  }
+  #core-text-mob{
+    display: block;
+  }
+  #core-text-desktop{
+    display: none;
   }
 }
 
@@ -2122,27 +2133,7 @@ html {
     /* Removed invalid property */
   }
 
-  .dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 6px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-
-  .dot.active {
-    background-color: #143434;
-    transform: scale(1.5);
-  }
+ 
 
 }
 

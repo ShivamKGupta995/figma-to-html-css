@@ -597,7 +597,6 @@ html {
   background-color: #fff;
   color: #000;
   padding: 7% 10%;
-  font-family: 'Inter', sans-serif;
 }
 
 .core-title {
@@ -659,7 +658,9 @@ html {
   font-weight: 600;
   color: #505050;
 }
-
+.core-p-mobile{
+  display: none;
+}
 .core-media {
   flex: 1 1 300px;
   display: flex;
@@ -688,28 +689,55 @@ html {
 
 
 /* Responsive Styling */
-/* 
-@media (max-width: 1024px) {
-  .core-title {
-    font-size: 44px;
-  }
 
-  .core-text h3 {
-    font-size: 26px;
-  }
-
-  .core-text p {
-    font-size: 16px;
-  }
-} */
-
-/* Mobile Tweaks */
 @media (max-width: 480px) {
-  .core-block {
+  .core-section {
+    width: 100%;
+    padding: 32px 16px;
     flex-direction: column;
-    gap: 30px;
-    margin-bottom: 50px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    row-gap: 16px;
   }
+
+  .core-title {
+  color: var(--Neutral-Black, #000);
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+
+.core-title span {
+  background: linear-gradient(90deg, #CC203B 82.69%, #063533 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "DM Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+
+ .core-block {
+  position: relative;
+  gap: 32px;
+
+  width: 100%;
+  height: fit-content;
+  background: url('../images/home/general/bg1.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  padding: 40px 24px;
+}
+
 
   .core-text,
   .core-media {
@@ -718,9 +746,8 @@ html {
 
   .core-media video,
   .core-media img {
+      position: relative;
     width: 100%;
-    max-width: 320px;
-    height: auto;
     border-radius: 24px;
     margin: 0 auto;
   }
@@ -730,38 +757,85 @@ html {
     width: 70%;
   }
 
+  .core-text h3{
+    position: relative;
+    top: 5%;
+    width: 343px;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "DM Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+.core-text h3 span{
+  background: linear-gradient(90deg, #CC203B 0%, #FA3A58 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "DM Sans";
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+}
+
   .core-text p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0 10px;
+    display: none;
+    /* padding: 10px;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    color: #000;
+    font-family: Sora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.32px; */
+  }
+
+  /* .core-text p span{
+    
+  } */
+  .core-p-mobile{
+    margin: -60px 16px 20px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    padding: 16px;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    color: #000;
+    font-family: Sora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.32px;
+  }
+  .core-p-mobile p span{
+    color: #000;
+  font-family: Sora;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.32px;
+
   }
 
   .core-title {
+
     font-size: 32px;
     margin-bottom: 20px;
   }
 }
 
-@media (max-width: 480px) {
-  .core-title {
-    font-size: 28px;
-    letter-spacing: -1px;
-  }
-
-  .core-text h3 {
-    font-size: 20px;
-  }
-
-  .core-text p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  .core-media video,
-  .core-media img {
-    border-radius: 24px;
-  }
-}
 
 
 
@@ -861,29 +935,12 @@ letter-spacing: -1.44px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .health-risk-section {
-    padding: 4rem 1rem;
-  }
 
-  .health-risk-section h2 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    letter-spacing: -0.5px;
-  }
-
-  .pill,
-  .img-pill {
-    width: 12rem;
-    height: 4rem;
-  }
-
-  .pill span {
-    font-size: 1.2rem;
-  }
-}
 
 @media screen and (max-width: 480px) {
+  .health-risk-section{
+    width: 100%;
+  }
   .health-risk-section h2 {
     font-size: 2rem;
     line-height: 1.2;
